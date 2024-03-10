@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be Flow</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo-beflow.svg" alt="Logo" width="40%" 
+        style="margin-top: 5%;">
+    </div>
+    <div class="login">
+        <h1>Be flow</h1>
+        <div class="code-container">
+            <div class="code code-top">
+                <h2>Iniciar Sesión</h2>
+                <div class="container" style="position: relative; z-index: 1000;">
+                    <form id="login" onsubmit="process(event)">
+                        <label>Número de teléfono</label>
+                        <input id="phone" type="tel" name="phone"/>
+                        <div class="alert alert-info" style="display: none;"></div>
+                    </form>
+                </div>
+                <div style="margin-top: 10%;">
+                    <button class="primary-button">
+                        Enviar código
+                    </button> 
+                </div>
+                o
+                <div style="margin-top: 10%;">
+                    <button class="google-button">
+                        <img src="assets/Google__G__logo.svg">Ingresar con Google
+                    </button>
+                </div>
+            </div>
+            <div class="code code-bottom"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["co", "us", "ve"],
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    const info = document.querySelector(".alert-info");
+    function getIp(callback) {
+    fetch('ipinfo.io/181.136.249.117?token=fe3125615f490e', { headers: { 'Accept': 'application/json' }})
+    .then((resp) => resp.json())
+    .catch(() => {
+        return {
+        country: 'co',
+        };
+    })
+    .then((resp) => callback(resp.country));
+    }
+    
+    
+    function process(event) {
+    event.preventDefault();
 
+    const phoneNumber = phoneInput.getNumber();
+    info.style.display = "";
+    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+    }
+  </script>
+</html>
