@@ -36,6 +36,22 @@ h2 {
     font-style: normal;
     color: var(--primary-color);
 }
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 45px;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--primary-color);
+}
+
 input {
     font-family: "Poppins", sans-serif;
     font-weight: 200;
@@ -188,4 +204,89 @@ button:hover {
 
 #phone {
     width: 243px;
+}
+
+#sidebar {
+    width:fit-content;
+    background-color: var(--secondary-color);
+}
+
+#dashboard-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#profile-container {
+    text-align: center;
+    padding-inline: 70px;
+    padding-top: 40px;
+}
+
+#profile-container img {
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+}
+
+.menu {
+    list-style: none;
+    padding: 0%;
+}
+
+.menu li {
+    text-align: center;
+    border-top: solid 1px var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    padding-inline: 5%;
+    padding-block: 2%;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#ciclos-list-container {
+    float: left;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-top: 10%;
+}
+
+
+#ciclos-list-container div{
+    list-style-position: inside;
+    background-color: var(--secondary-color);
+    text-align: left;
+    border-radius: 16px;
+    padding: 2%;
+}
+
+#ciclos-list-container div li{
+    padding: 3%;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+#ciclos-list-container div li span{
+    float: right;
+    font-weight: 600;
+}
+
+li:hover{
+    background-color: var(--primary-color-10);
+}
+
+#title {
+    margin-bottom: 5%;
+}
+
+#main-content{
+    background-image: url('/assets/patron-verde.svg');
+    background-repeat:no-repeat;
+    background-position: right
 }
