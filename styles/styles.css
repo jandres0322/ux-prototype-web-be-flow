@@ -208,6 +208,7 @@ button:hover {
 
 #sidebar {
     width:fit-content;
+    text-align: center;
     background-color: var(--secondary-color);
 }
 
@@ -232,6 +233,7 @@ button:hover {
 .menu {
     list-style: none;
     padding: 0%;
+    margin-bottom: 55%;
 }
 
 .menu li {
