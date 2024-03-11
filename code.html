@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be Flow</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo-beflow.svg" alt="Logo" width="40%" 
+        style="margin-top: 5%;">
+    </div>
+    <div class="login">
+        <h1>Be flow</h1>
+        <div class="code-container">
+            <div class="code code-top">
+                <p>Introduce el código de 6 dígitos</p>
+                <form>
+                    <input id="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
+                    <input id="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
+                    <input id="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
+                    <input id="otp" type="text" oninput='digitValidate(this)'onkeyup='tabChange(4)' maxlength=1 >
+                    <input id="otp" type="text" oninput='digitValidate(this)'onkeyup='tabChange(5)' maxlength=1 >
+                    <input id="otp" type="text" oninput='digitValidate(this)'onkeyup='tabChange(6)' maxlength=1 >
+                  </form>
+                <div class="" style="position: relative; z-index: 1000;">
+                    <form style="visibility: hidden; height: 1px;">
+                        <label style="visibility: hidden;">Número de teléfono</label>
+                        <input id="phone" type="tel" name="phone"/>
+                    </form>
+                </div>
+                <div style="margin-top: 15%;">
+                    <p>Tu código se envió a +57 301456744</p>
+                    <br>
+                    <a href="/code.html">
+                        <button class="secondary-button">
+                        Volver a enviar código
+                        </button>
+                    </a>
+                </div>
+                <div style="margin-top: 15%;">
+                    <button class="primary-button">
+                        Ingresar
+                    </button>
+                </div>
+            </div>
+            <div class="code code-bottom"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let digitValidate = function(ele){
+  console.log(ele.value);
+  ele.value = ele.value.replace(/[^0-9]/g,'');
+}
+
+let tabChange = function(val){
+    let ele = document.querySelectorAll('input');
+    if(ele[val-1].value != ''){
+      ele[val].focus()
+    }else if(ele[val-1].value == ''){
+      ele[val-2].focus()
+    }   
+ }
+  </script>
+</html>

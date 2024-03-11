@@ -27,9 +27,11 @@
                     </form>
                 </div>
                 <div style="margin-top: 10%;">
-                    <button class="primary-button">
+                    <a href="/code.html">
+                        <button class="primary-button">
                         Enviar código
-                    </button> 
+                        </button>
+                    </a>
                 </div>
                 o
                 <div style="margin-top: 10%;">
@@ -51,11 +53,11 @@
         });
     const info = document.querySelector(".alert-info");
     function getIp(callback) {
-    fetch('ipinfo.io/181.136.249.117?token=fe3125615f490e', { headers: { 'Accept': 'application/json' }})
-    .then((resp) => resp.json())
-    .catch(() => {
-        return {
-        country: 'co',
+        fetch('ipinfo.io/181.136.249.117?token=fe3125615f490e', { headers: { 'Accept': 'application/json' }})
+        .then((resp) => resp.json())
+        .catch(() => {
+            return {
+            country: 'co',
         };
     })
     .then((resp) => callback(resp.country));
@@ -63,11 +65,10 @@
     
     
     function process(event) {
-    event.preventDefault();
-
-    const phoneNumber = phoneInput.getNumber();
-    info.style.display = "";
-    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
-    }
+        event.preventDefault();
+        const phoneNumber = phoneInput.getNumber();
+        info.style.display = "";
+        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+        }
   </script>
 </html>

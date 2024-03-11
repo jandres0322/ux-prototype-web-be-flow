@@ -2,6 +2,7 @@
 :root {
 
     --primary-color: #005240;
+    --primary-color-10: #0052403d;
     --focused-color: #005240e5;
     --secondary-color: #BFE7A2;
     --input-gray: #6F7975;
@@ -49,6 +50,10 @@ input:focus {
     outline: none;
     border: 1px solid var(--primary-color);
 }
+
+p {
+    font-size: 13px;
+}
 .logo {
     width: 50%;
     text-align: center;
@@ -58,12 +63,21 @@ input:focus {
     padding-inline: 10%;
     text-align: center;
 }
-
+.login-code {
+    padding-inline: 10%;
+    text-align: center;
+}
 .primary-button {
     margin-block: 2%;
     color: white;
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
+}
+
+.secondary-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
 }
 
 .primary-button:hover {
@@ -89,7 +103,6 @@ input:focus {
 }
 
 .login input {
-    width: 98%;
     font-size: 13px;
     padding-block: 15px;
 }
@@ -107,7 +120,7 @@ label {
 }
 button {
     font-size: 14px;
-    width: 90%;
+    width: 243px;
     padding: 10px 20px;
     border-radius: 100px;
     height: 40px;
@@ -158,3 +171,21 @@ button:hover {
     padding-top:  8%;
 }
 
+.row {
+    width: 243px;
+}
+
+#otp{
+    width:34px;
+    border: none;
+    text-align: center;
+    background-color: var(--primary-color-10);
+    color: black;
+    font-weight: 500;
+    font-size: 24px;
+    padding-block: 5px;
+}
+
+#phone {
+    width: 243px;
+}
