@@ -257,7 +257,7 @@ button:hover {
 }
 
 
-#ciclos-list-container div{
+.lista-hist{
     list-style-position: inside;
     background-color: var(--secondary-color);
     text-align: left;
@@ -265,7 +265,7 @@ button:hover {
     padding: 2%;
 }
 
-#ciclos-list-container div li{
+.lista-hist li{
     padding: 3%;
     border-radius: 50px;
     font-size: 14px;
@@ -274,7 +274,7 @@ button:hover {
     font-weight: 400;
 }
 
-#ciclos-list-container div li span{
+.lista-hist li span{
     float: right;
     font-weight: 600;
 }
@@ -291,4 +291,13 @@ li:hover{
     background-image: url('/assets/patron-verde.svg');
     background-repeat:no-repeat;
     background-position: right
+}
+
+#contador {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    min-width: 200px;
+    margin: 3%;
+    padding-block: 5%;
 }
