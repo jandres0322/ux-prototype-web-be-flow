@@ -130,7 +130,7 @@ label {
     font-style: normal;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    margin: 0 0 -2% 8%;
+    margin: 0 0 -2% 6%;
     position: relative;
     z-index: 100;
 }
@@ -212,6 +212,10 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
+#sidebar button {
+    position: relative;
+}
+
 #dashboard-container {
     display: flex;
     height: 100%;
@@ -233,7 +237,7 @@ button:hover {
 .menu {
     list-style: none;
     padding: 0%;
-    margin-bottom: 55%;
+    margin-bottom: 65%;
 }
 
 .menu li {
@@ -242,6 +246,7 @@ button:hover {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-weight: 500;
+    line-height: 1;
     font-style: normal;
     padding-inline: 5%;
     padding-block: 2%;
@@ -317,3 +322,38 @@ select{
   select:focus{
     outline:none;
   }
+  .input-container {
+    position: relative;
+    display: block;
+    margin-top: 5%;
+  }
+
+  .input-container input{
+    height: 48px;
+    width: 306px;
+    padding-inline: 5%;
+  }
+
+  .input-container label{
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 400;
+  }
+  
+  .clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-20%);
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .label-perfil {
+    background-color: white;
+  }
+
+.clear-icon:hover {
+  color: #333;
+  transition: color 0.3s ease;
+}
