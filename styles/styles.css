@@ -301,3 +301,19 @@ li:hover{
     margin: 3%;
     padding-block: 5%;
 }
+
+select{
+    border:none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius:4px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  select:focus{
+    outline:none;
+  }
