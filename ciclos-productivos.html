@@ -26,19 +26,24 @@
         <div id="sidebar">
             <div id="profile-container">
                 <img src="assets/profile.jpeg" alt="Foto de perfil">
-                <h4>Mi Perfil</h4>
+                <a href="perfil.html" style="text-decoration: none;"><h4>Mi Perfil</h4></a>
             </div>
             <ul class="menu">
-                <li>Reporte de ciclos productivos</li>
+                <a href="ciclos-trabajados.html" style="text-decoration: none;"><li>Resumen de ciclos trabajados</li></a>
                 <a href="resumen-tareas.html" style="text-decoration: none;"><li>Resumen de tareas realizadas</li></a>
-                <li>Reporte de ciclos productivos</li>
+                <a href="ciclos-productivos.html" style="text-decoration: none;"><li>Reporte de ciclos productivos</li></a>
             </ul>
-            <button class="primary-button">Salir</button>
+            <a href="index.html"><button class="primary-button">Salir</button></a>
         </div>
         <div id="main-content">
-            <h1 id="title">Resumen Ciclos trabajados</h1>
+            <h1 id="title">Reporte de Ciclos productivos</h1>
             <div>
                 <div id="bar-chart-container" >
+                    <select name="years" id="years">
+                        <option value="01">2021</option>
+                        <option value="02">2022</option>
+                        <option value="03" selected>2023</option>
+                    </select>
                     <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
                     padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
                     border-radius: 8px; will-change: transform;">
@@ -50,6 +55,11 @@
                 </div>
             </div>
             <div id="bar-chart-container">
+                <select name="months" id="months">
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03" selected>Marzo</option>
+                </select>
                 <div style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
                 border-radius: 8px; will-change: transform;">
